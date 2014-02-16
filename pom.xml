@@ -44,25 +44,13 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
-
-        <pluginRepository>
-            <id>netbeans</id>
-            <name>NetBeans</name>
-            <url>http://bits.netbeans.org/maven2/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
     </pluginRepositories>
 
     <build>
         <directory>target</directory>
-        <outputDirectory>target/classes</outputDirectory>
+        <!--<outputDirectory>target/classes</outputDirectory>-->
         <finalName>${artifactId}-${version}</finalName>
-        <testOutputDirectory>target/test-classes</testOutputDirectory>
+        <!--<testOutputDirectory>target/test-classes</testOutputDirectory>-->
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

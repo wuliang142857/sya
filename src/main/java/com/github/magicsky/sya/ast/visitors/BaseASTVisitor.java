@@ -1,21 +1,13 @@
-package com.github.magicsky.sya.ast;
+package com.github.magicsky.sya.ast.visitors;
 
-import com.google.common.collect.Lists;
-import lombok.Getter;
 import org.eclipse.cdt.core.dom.ast.ASTVisitor;
-import org.eclipse.cdt.core.dom.ast.IASTDeclaration;
-
-import java.util.List;
 
 /**
  * @author garcia.wul@alibaba-inc.com
  */
-public class ASTDeclarationsVisitor extends ASTVisitor {
+public class BaseASTVisitor extends ASTVisitor {
 
-    @Getter
-    private List<IASTDeclaration> declarations = Lists.newArrayList();
-
-    public ASTDeclarationsVisitor() {
+    public BaseASTVisitor() {
         super.shouldVisitAmbiguousNodes = true;
         super.shouldVisitArrayModifiers = true;
         super.shouldVisitBaseSpecifiers = true;
@@ -37,11 +29,6 @@ public class ASTDeclarationsVisitor extends ASTVisitor {
         super.shouldVisitTemplateParameters = true;
         super.shouldVisitTranslationUnit = true;
         super.shouldVisitTypeIds = true;
-    }
-
-    public int visit(IASTDeclaration declaration) {
-        declarations.add(declaration);
-        return PROCESS_CONTINUE;
     }
 
 }
