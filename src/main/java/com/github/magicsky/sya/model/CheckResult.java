@@ -14,6 +14,7 @@ public class CheckResult {
     private int startingLineNumber;
     private int endingLineNumber;
     private String fileName;
+    private String comments;
 
     public CheckResult(ErrorItem errorItem, ErrorType errorType,
                        String fileName,

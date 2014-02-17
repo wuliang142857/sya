@@ -4,7 +4,8 @@ package com.github.magicsky.sya.enumerators;
  * @author garcia.wul@alibaba-inc.com
  */
 public enum ErrorItem {
-    AUTO_PTR(1, "任何情况下都不要使用auto_ptr"),
+    AUTO_PTR(1, "不要使用std::auto_ptr"),
+    BUFFER_OVERFLOW_FUNCTION(1, "不要使用会造成缓冲区溢出(buffer overflow)的函数")
     ;
 
     private int value;

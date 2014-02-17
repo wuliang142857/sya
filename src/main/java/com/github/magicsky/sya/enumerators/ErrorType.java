@@ -5,6 +5,7 @@ package com.github.magicsky.sya.enumerators;
  */
 public enum ErrorType {
     STYLE(1, "编码分隔"),
+    RISK(2, "风险")
     ;
 
     private int value;

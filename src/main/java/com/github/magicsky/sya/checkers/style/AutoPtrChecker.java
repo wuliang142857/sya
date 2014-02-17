@@ -5,30 +5,23 @@ import com.github.magicsky.sya.checkers.BaseChecker;
 import com.github.magicsky.sya.enumerators.ErrorItem;
 import com.github.magicsky.sya.enumerators.ErrorType;
 import com.github.magicsky.sya.model.CheckResult;
-import com.github.mustachejava.DefaultMustacheFactory;
-import com.github.mustachejava.Mustache;
-import com.github.mustachejava.MustacheFactory;
 import com.google.common.collect.Lists;
-import org.apache.log4j.Logger;
+import com.google.common.collect.Maps;
 import org.eclipse.cdt.core.dom.ast.IASTDeclarationStatement;
 import org.eclipse.cdt.core.dom.ast.IASTSimpleDeclaration;
 import org.eclipse.cdt.core.dom.ast.IASTStatement;
 import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 
-import java.io.StringReader;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author garcia.wul@alibaba-inc.com
  */
 public class AutoPtrChecker extends BaseChecker {
 
-    MustacheFactory mustacheFactory = new DefaultMustacheFactory();
-    private Mustache errorMessage = mustacheFactory.compile(
-        new StringReader(
-        "{{{checkResult.errorItem.desc}}} in {{{checkResult.fileName}}}, line: {{{checkResult.startingLineNumber}}}"
-        ), "AutoPtr"
-    );
+    private String errorMessage =
+        "{{{checkResult.errorItem.desc}}} in {{{checkResult.fileName}}}, line: {{{checkResult.startingLineNumber}}}";
 
 
     @Override
@@ -60,7 +53,14 @@ public class AutoPtrChecker extends BaseChecker {
                     declaration.getFileLocation().getEndingLineNumber()
                 );
                 checkResults.add(checkResult);
-                logger.error(compileErrorMessage(errorMessage, checkResult));
+
+                // log结果
+                Map<String, Object> scopes = Maps.newHashMap();
+                scopes.put("checkResult", checkResult);
+                String comments = compileErrorMessage(errorMessage, scopes);
+                logger.error(comments);
+
+                checkResult.setComments(comments);
             }
         }
         return checkResults;

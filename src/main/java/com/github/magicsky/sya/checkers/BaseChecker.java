@@ -1,11 +1,12 @@
 package com.github.magicsky.sya.checkers;
 
-import com.github.magicsky.sya.model.CheckResult;
+import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.Mustache;
-import com.google.common.collect.Maps;
+import com.github.mustachejava.MustacheFactory;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
+import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.Map;
@@ -17,9 +18,11 @@ public abstract class BaseChecker implements IChecker {
 
     protected Logger logger = Logger.getLogger(getClass());
 
-    protected String compileErrorMessage(Mustache template, CheckResult checkResult) {
-        Map<String, Object> scopes = Maps.newHashMap();
-        scopes.put("checkResult", checkResult);
+    private MustacheFactory mustacheFactory = new DefaultMustacheFactory();
+
+    protected String compileErrorMessage(String message, Map<String, Object> scopes) {
+        Mustache template = mustacheFactory.compile(new StringReader(message), "example");
+
         Writer writer = new StringWriter();
         template.execute(writer, scopes);
         try {
