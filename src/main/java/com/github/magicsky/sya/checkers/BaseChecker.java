@@ -1,4 +1,4 @@
-package com.github.magicsky.sya.unittests.checkers;
+package com.github.magicsky.sya.checkers;
 
 /**
  * @author garcia.wul@alibaba-inc.com

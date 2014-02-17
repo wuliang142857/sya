@@ -1,9 +1,9 @@
-package com.github.magicsky.sya.unittests.checkers.style;
+package com.github.magicsky.sya.checkers.style;
 
 import com.github.magicsky.sya.enumerators.CheckType;
 import com.github.magicsky.sya.model.CheckResult;
-import com.github.magicsky.sya.unittests.checkers.BaseTest;
-import com.github.magicsky.sya.unittests.checkers.IChecker;
+import com.github.magicsky.sya.checkers.BaseTest;
+import com.github.magicsky.sya.checkers.IChecker;
 import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 
 import java.util.List;

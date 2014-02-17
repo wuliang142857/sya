@@ -10,7 +10,7 @@
  *     Andrew Ferguson (Symbian)
  *     Sergey Prigogin (Google)
  *******************************************************************************/
-package com.github.magicsky.sya.unittests.checkers;
+package com.github.magicsky.sya.checkers;
 
 import junit.framework.Assert;
 import org.apache.commons.io.FileUtils;

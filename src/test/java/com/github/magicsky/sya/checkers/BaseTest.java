@@ -1,4 +1,4 @@
-package com.github.magicsky.sya.unittests.checkers;
+package com.github.magicsky.sya.checkers;
 
 
 import com.github.magicsky.sya.ast.ASTTranslationUnitCore;

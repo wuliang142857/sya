@@ -1,7 +1,7 @@
-package com.github.magicsky.sya.unittests.checkers.style;
+package com.github.magicsky.sya.checkers.style;
 
 import com.github.magicsky.sya.ast.visitors.ASTStatementsVisitor;
-import com.github.magicsky.sya.unittests.checkers.BaseChecker;
+import com.github.magicsky.sya.checkers.BaseChecker;
 import com.github.magicsky.sya.enumerators.CheckType;
 import com.github.magicsky.sya.model.CheckResult;
 import com.google.common.collect.Lists;
