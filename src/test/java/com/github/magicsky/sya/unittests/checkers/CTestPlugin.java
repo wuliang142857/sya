@@ -1,4 +1,4 @@
-package com.github.magicsky.sya.unittests;
+package com.github.magicsky.sya.unittests.checkers;
 
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.IWorkspaceDescription;

@@ -9,4 +9,14 @@ import lombok.Data;
 @Data
 public class CheckResult {
     private CheckType type;
+    private int startingLineNumber;
+    private int endingLineNumber;
+    private String fileName;
+
+    public CheckResult(CheckType type, String fileName, int startingLineNumber, int endingLineNumber) {
+        setType(type);
+        setFileName(fileName);
+        setStartingLineNumber(startingLineNumber);
+        setEndingLineNumber(endingLineNumber);
+    }
 }

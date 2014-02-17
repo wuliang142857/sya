@@ -26,28 +26,48 @@ import java.util.Map;
 /**
  * @author garcia.wul@alibaba-inc.com
  */
-public class ASTTranslationUnitCore {
+public class ASTTranslationUnitCore implements IASTTranslationUnitCore {
     private final static String TEST_CODE = "<testcode>";
     private final static IParserLogService NULL_LOG = new NullLogService();
 
-    public IASTTranslationUnit parse(
+    public IASTTranslationUnit parseFile(
         String file,
         ParserLanguage parserLanguage,
         boolean useGNUExtensions,
         boolean skipTrivialInitializers
     ) {
-        IScanner scanner = null;
+        String code = null;
         try {
-            scanner = createScanner(
-                FileContent.create(file, FileUtils.readFileToString(new File(file)).toCharArray()),
-                parserLanguage,
-                ParserMode.COMPLETE_PARSE,
-                createScannerInfo(useGNUExtensions)
-            );
+            code = FileUtils.readFileToString(new File(file));
         } catch (IOException e) {
             e.printStackTrace();
             return null;
         }
+        return parse(file, code, parserLanguage, useGNUExtensions, skipTrivialInitializers);
+    }
+
+    public IASTTranslationUnit parseCode(
+        String code,
+        ParserLanguage parserLanguage,
+        boolean useGNUExtensions,
+        boolean skipTrivialInitializers
+    ) {
+        return parse(TEST_CODE, code, parserLanguage, useGNUExtensions, skipTrivialInitializers);
+    }
+
+    private IASTTranslationUnit parse(
+        String file,
+        String code,
+        ParserLanguage parserLanguage,
+        boolean useGNUExtensions,
+        boolean skipTrivialInitializers
+    ) {
+        IScanner scanner = createScanner(
+            FileContent.create(file, code.toCharArray()),
+            parserLanguage,
+            ParserMode.COMPLETE_PARSE,
+            createScannerInfo(useGNUExtensions)
+        );
         AbstractGNUSourceCodeParser gnuSourceCodeParser = null;
         if (parserLanguage == ParserLanguage.CPP) {
             ICPPParserExtensionConfiguration configuration = useGNUExtensions ?
