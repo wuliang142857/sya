@@ -1,6 +1,7 @@
 package com.github.magicsky.sya.ast;
 
 import com.google.common.collect.Maps;
+import org.apache.commons.io.FileUtils;
 import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 import org.eclipse.cdt.core.dom.parser.IScannerExtensionConfiguration;
 import org.eclipse.cdt.core.dom.parser.c.ANSICParserExtensionConfiguration;
@@ -17,6 +18,8 @@ import org.eclipse.cdt.internal.core.dom.parser.c.GNUCSourceParser;
 import org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser;
 import org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Map;
 
 
@@ -28,15 +31,23 @@ public class ASTTranslationUnitCore {
     private final static IParserLogService NULL_LOG = new NullLogService();
 
     public IASTTranslationUnit parse(
-        char[] code,
+        String file,
         ParserLanguage parserLanguage,
         boolean useGNUExtensions,
-        boolean expectNoProblems,
         boolean skipTrivialInitializers
     ) {
-        IScanner scanner = createScanner(
-            FileContent.create(TEST_CODE, code), parserLanguage,            ParserMode.COMPLETE_PARSE,crateScannerInfo(useGNUExtensions)
+        IScanner scanner = null;
+        try {
+            scanner = createScanner(
+                FileContent.create(file, FileUtils.readFileToString(new File(file)).toCharArray()),
+                parserLanguage,
+                ParserMode.COMPLETE_PARSE,
+                createScannerInfo(useGNUExtensions)
             );
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
         AbstractGNUSourceCodeParser gnuSourceCodeParser = null;
         if (parserLanguage == ParserLanguage.CPP) {
             ICPPParserExtensionConfiguration configuration = useGNUExtensions ?
@@ -70,13 +81,13 @@ public class ASTTranslationUnitCore {
             parserLanguage == ParserLanguage.C ?
                 GCCScannerExtensionConfiguration.getInstance(scannerInfo) :
                 GPPScannerExtensionConfiguration.getInstance(scannerInfo);
+        // garcia.wul 最后一个参数：IncludeFileContentProvider传null，不然会报workspace is closed错误
         return new CPreprocessor(
-            fileContent, scannerInfo, parserLanguage, NULL_LOG, configuration,
-            IncludeFileContentProvider.getSavedFilesProvider()
+            fileContent, scannerInfo, parserLanguage, NULL_LOG, configuration, null
         );
     }
 
-    public ScannerInfo crateScannerInfo(boolean useGNUExtensions) {
+    public ScannerInfo createScannerInfo(boolean useGNUExtensions) {
         return useGNUExtensions ? new ScannerInfo(getGnuMap()) : new ScannerInfo(getStdMap());
     }
 

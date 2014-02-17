@@ -7,7 +7,6 @@ public interface IChecker {
 
     /**
      * 检查
-     * @param obj
      */
-    public void check(Object obj);
+    public int check(Object obj);
 }

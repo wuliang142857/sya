@@ -177,11 +177,18 @@
         </dependency>
 
         <dependency>
+            <groupId>com.github.spullara.mustache.java</groupId>
+            <artifactId>compiler</artifactId>
+            <version>0.8.13</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-openide-filesystems</artifactId>
             <version>7.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/org-openide-filesystems.jar</systemPath>
+            <systemPath>${project.basedir}/libs/org-openide-filesystems.jar
+            </systemPath>
         </dependency>
 
         <dependency>
@@ -189,7 +196,8 @@
             <artifactId>org-openide-util</artifactId>
             <version>7.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/org-openide-util.jar</systemPath>
+            <systemPath>${project.basedir}/libs/org-openide-util.jar
+            </systemPath>
         </dependency>
 
         <dependency>
@@ -197,7 +205,8 @@
             <artifactId>org-openide-modules</artifactId>
             <version>7.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/org-openide-modules.jar</systemPath>
+            <systemPath>${project.basedir}/libs/org-openide-modules.jar
+            </systemPath>
         </dependency>
 
         <dependency>
@@ -205,7 +214,8 @@
             <artifactId>org-openide-util-lookup</artifactId>
             <version>7.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/org-openide-util-lookup.jar</systemPath>
+            <systemPath>${project.basedir}/libs/org-openide-util-lookup.jar
+            </systemPath>
         </dependency>
 
         <dependency>
@@ -213,7 +223,8 @@
             <artifactId>org-openidex-util</artifactId>
             <version>7.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/org-openidex-util.jar</systemPath>
+            <systemPath>${project.basedir}/libs/org-openidex-util.jar
+            </systemPath>
         </dependency>
 
         <!-- CDT -->
@@ -222,7 +233,9 @@
             <artifactId>org.eclipse.cdt.core</artifactId>
             <version>5.5.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/org.eclipse.cdt.core_5.5.0.201309180223.jar</systemPath>
+            <systemPath>
+                ${project.basedir}/libs/org.eclipse.cdt.core_5.5.0.201309180223.jar
+            </systemPath>
         </dependency>
 
         <dependency>
@@ -230,7 +243,9 @@
             <artifactId>org.eclipse.cdt</artifactId>
             <version>8.2.1</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/org.eclipse.cdt_8.2.1.201309180223.jar</systemPath>
+            <systemPath>
+                ${project.basedir}/libs/org.eclipse.cdt_8.2.1.201309180223.jar
+            </systemPath>
         </dependency>
 
         <dependency>
@@ -238,7 +253,9 @@
             <artifactId>org.eclipse.core.jobs</artifactId>
             <version>3.5.300</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/org.eclipse.core.jobs_3.5.300.v20130429-1813.jar</systemPath>
+            <systemPath>
+                ${project.basedir}/libs/org.eclipse.core.jobs_3.5.300.v20130429-1813.jar
+            </systemPath>
         </dependency>
 
         <dependency>
@@ -246,7 +263,9 @@
             <artifactId>org.eclipse.core.resources</artifactId>
             <version>3.8.101</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/org.eclipse.core.resources_3.8.101.v20130717-0806.jar</systemPath>
+            <systemPath>
+                ${project.basedir}/libs/org.eclipse.core.resources_3.8.101.v20130717-0806.jar
+            </systemPath>
         </dependency>
 
         <dependency>
@@ -254,7 +273,9 @@
             <artifactId>org.eclipse.core.runtime</artifactId>
             <version>3.9.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/org.eclipse.core.runtime_3.9.0.v20130326-1255.jar</systemPath>
+            <systemPath>
+                ${project.basedir}/libs/org.eclipse.core.runtime_3.9.0.v20130326-1255.jar
+            </systemPath>
         </dependency>
 
         <dependency>
@@ -262,7 +283,9 @@
             <artifactId>org.eclipse.equinox.common</artifactId>
             <version>3.6.200</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar</systemPath>
+            <systemPath>
+                ${project.basedir}/libs/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar
+            </systemPath>
         </dependency>
 
         <dependency>
@@ -270,13 +293,16 @@
             <artifactId>org.eclipse.osgi</artifactId>
             <version>3.9.1</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/org.eclipse.osgi_3.9.1.v20130814-1242.jar</systemPath>
+            <systemPath>
+                ${project.basedir}/libs/org.eclipse.osgi_3.9.1.v20130814-1242.jar
+            </systemPath>
         </dependency>
 
     </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.reporting.outputEncoding>UTF-8
+        </project.reporting.outputEncoding>
     </properties>
 </project>
