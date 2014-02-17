@@ -59,7 +59,7 @@
                 <executions>
 
                     <execution>
-                        <id>Build DiffCoverage</id>
+                        <id>Build Checker</id>
                         <phase>package</phase>
                         <goals>
                             <goal>shade</goal>

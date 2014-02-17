@@ -1,9 +1,9 @@
 package com.github.magicsky.sya.checkers.style;
 
-import com.github.magicsky.sya.enumerators.CheckType;
-import com.github.magicsky.sya.model.CheckResult;
 import com.github.magicsky.sya.checkers.BaseTest;
 import com.github.magicsky.sya.checkers.IChecker;
+import com.github.magicsky.sya.enumerators.ErrorItem;
+import com.github.magicsky.sya.model.CheckResult;
 import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 
 import java.util.List;
@@ -37,7 +37,7 @@ public class AutoPtrCheckerTest extends BaseTest {
         List<CheckResult> checkResults = checker.check(translationUnit);
         assertTrue(checkResults.size() > 0);
         CheckResult checkResult = checkResults.get(0);
-        assertEquals(CheckType.AUTO_PTR.getValue(), checkResult.getType().getValue());
+        assertEquals(ErrorItem.AUTO_PTR.getValue(), checkResult.getErrorItem().getValue());
     }
 
 //    // 测试当使用std::auto_ptr
@@ -61,6 +61,6 @@ public class AutoPtrCheckerTest extends BaseTest {
         List<CheckResult> checkResults = checker.check(translationUnit);
         assertTrue(checkResults.size() > 0);
         CheckResult checkResult = checkResults.get(0);
-        assertEquals(CheckType.AUTO_PTR.getValue(), checkResult.getType().getValue());
+        assertEquals(ErrorItem.AUTO_PTR.getValue(), checkResult.getErrorItem().getValue());
     }
 }

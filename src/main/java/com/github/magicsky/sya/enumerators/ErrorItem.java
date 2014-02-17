@@ -3,27 +3,27 @@ package com.github.magicsky.sya.enumerators;
 /**
  * @author garcia.wul@alibaba-inc.com
  */
-public enum CheckType {
+public enum ErrorItem {
     AUTO_PTR(1, "任何情况下都不要使用auto_ptr"),
     ;
 
     private int value;
     private String desc;
 
-     CheckType(int value, String desc) {
+     ErrorItem(int value, String desc) {
         setValue(value);
         setDesc(desc);
     }
 
-    public static CheckType getDescByValue(int value) {
-        CheckType checkType = null;
-        for (CheckType type: CheckType.values()) {
+    public static ErrorItem getDescByValue(int value) {
+        ErrorItem errorItem = null;
+        for (ErrorItem type: ErrorItem.values()) {
             if (type.getValue() == value) {
-                checkType = type;
+                errorItem = type;
                 break;
             }
         }
-        return checkType;
+        return errorItem;
     }
 
     public String getDesc() {

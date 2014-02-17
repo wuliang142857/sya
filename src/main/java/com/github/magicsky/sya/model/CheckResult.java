@@ -1,6 +1,7 @@
 package com.github.magicsky.sya.model;
 
-import com.github.magicsky.sya.enumerators.CheckType;
+import com.github.magicsky.sya.enumerators.ErrorItem;
+import com.github.magicsky.sya.enumerators.ErrorType;
 import lombok.Data;
 
 /**
@@ -8,13 +9,17 @@ import lombok.Data;
  */
 @Data
 public class CheckResult {
-    private CheckType type;
+    private ErrorItem errorItem;
+    private ErrorType errorType;
     private int startingLineNumber;
     private int endingLineNumber;
     private String fileName;
 
-    public CheckResult(CheckType type, String fileName, int startingLineNumber, int endingLineNumber) {
-        setType(type);
+    public CheckResult(ErrorItem errorItem, ErrorType errorType,
+                       String fileName,
+                       int startingLineNumber, int endingLineNumber) {
+        setErrorItem(errorItem);
+        setErrorType(errorType);
         setFileName(fileName);
         setStartingLineNumber(startingLineNumber);
         setEndingLineNumber(endingLineNumber);

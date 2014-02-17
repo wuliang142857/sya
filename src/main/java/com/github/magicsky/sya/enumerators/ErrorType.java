@@ -1,0 +1,33 @@
+package com.github.magicsky.sya.enumerators;
+
+/**
+ * @author garcia.wul@alibaba-inc.com
+ */
+public enum ErrorType {
+    STYLE(1, "编码分隔"),
+    ;
+
+    private int value;
+    private String desc;
+
+    ErrorType(int value, String desc) {
+        setValue(value);
+        setDesc(desc);
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+}
