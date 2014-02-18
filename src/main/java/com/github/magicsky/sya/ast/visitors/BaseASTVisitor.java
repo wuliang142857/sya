@@ -8,27 +8,31 @@ import org.eclipse.cdt.core.dom.ast.ASTVisitor;
 public class BaseASTVisitor extends ASTVisitor {
 
     public BaseASTVisitor() {
-        super.shouldVisitAmbiguousNodes = true;
-        super.shouldVisitArrayModifiers = true;
-        super.shouldVisitBaseSpecifiers = true;
+        super.shouldVisitNames = true;
         super.shouldVisitDeclarations = true;
+        super.shouldVisitInitializers = true;
+        super.shouldVisitParameterDeclarations = true;
         super.shouldVisitDeclarators = true;
         super.shouldVisitDeclSpecifiers = true;
-        super.shouldVisitDesignators = true;
-        super.shouldVisitEnumerators = true;
-        super.shouldVisitExpressions = true;
-        super.shouldVisitImplicitNameAlternates = true;
-        super.shouldVisitImplicitNames = true;
-        super.shouldVisitInitializers = true;
-        super.shouldVisitNames = true;
-        super.shouldVisitNamespaces = true;
-        super.shouldVisitParameterDeclarations = true;
+        super.shouldVisitArrayModifiers = true;
         super.shouldVisitPointerOperators = true;
-        super.shouldVisitProblems = true;
+        super.shouldVisitAttributes = true;
+        super.shouldVisitTokens = true;
+        super.shouldVisitExpressions = true;
         super.shouldVisitStatements = true;
-        super.shouldVisitTemplateParameters = true;
-        super.shouldVisitTranslationUnit = true;
         super.shouldVisitTypeIds = true;
+        super.shouldVisitEnumerators = true;
+        super.shouldVisitTranslationUnit = true;
+        super.shouldVisitProblems = true;
+        super.shouldVisitDesignators = true;
+        super.shouldVisitBaseSpecifiers = true;
+        super.shouldVisitNamespaces = true;
+        super.shouldVisitTemplateParameters = true;
+        super.shouldVisitCaptures = true;
+        super.includeInactiveNodes = true;
+        super.shouldVisitAmbiguousNodes = true;
+        super.shouldVisitImplicitNames = true;
+        super.shouldVisitImplicitNameAlternates = true;
     }
 
 }

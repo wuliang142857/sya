@@ -15,9 +15,9 @@ import java.io.IOException;
 public class BaseTest extends TestCase {
 
     protected String rootPath = "/Users/wul/zone/sya/src/test/java";
-    protected IASTTranslationUnitCore translationUnitCore = new ASTTranslationUnitCore();
+    public IASTTranslationUnitCore translationUnitCore = new ASTTranslationUnitCore();
 
-    protected String getCommentAbove() {
+    public String getCommentAbove() {
         CharSequence[] charSequences = new CharSequence[0];
         try {
             charSequences = TestSourceReader.getContentsForTest(
@@ -30,7 +30,12 @@ public class BaseTest extends TestCase {
         return charSequences[0].toString();
     }
 
-    protected IASTTranslationUnit parseCPP(String code) {
-        return translationUnitCore.parseCode(code, ParserLanguage.CPP, true, false);
+    public IASTTranslationUnit parseCPP(String code) {
+        return translationUnitCore.parseCode(code, ParserLanguage.CPP, false, false);
     }
+
+    public IASTTranslationUnit parseC(String code) {
+        return translationUnitCore.parseCode(code, ParserLanguage.C, true, false);
+    }
+
 }
