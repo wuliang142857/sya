@@ -5,6 +5,9 @@ import com.github.magicsky.sya.checkers.BaseChecker;
 import com.github.magicsky.sya.enumerators.ErrorItem;
 import com.github.magicsky.sya.enumerators.ErrorType;
 import com.github.magicsky.sya.model.CheckResult;
+import com.github.magicsky.sya.model.ConfigProperty;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import org.eclipse.cdt.core.dom.ast.*;
@@ -20,6 +23,9 @@ public class SmartPointerChecker extends BaseChecker {
     private String errorMessage =
         "{{{checkResult.errorItem.desc}}} in {{{checkResult.fileName}}}, line: {{{checkResult.startingLineNumber}}}";
 
+    public SmartPointerChecker(ConfigProperty configProperty) {
+        super(configProperty);
+    }
 
     @Override
     public List<CheckResult> check(Object obj) {
@@ -40,13 +46,17 @@ public class SmartPointerChecker extends BaseChecker {
 
             IASTSimpleDeclaration declaration = (IASTSimpleDeclaration) declarationStatement.getDeclaration();
             // 2014-02-16 garcia.wul 如果用户自己定义了auto_ptr函数，则目前无法识别
-            IASTDeclSpecifier declSpeciafier = declaration.getDeclSpecifier();
-            if (declSpeciafier.toString().contains("auto_ptr") ||
-                declSpeciafier.toString().contains("std::auto_ptr") ||
-                declSpeciafier.toString().contains("scoped_ptr") ||
-                declSpeciafier.toString().contains("boost::scoped_ptr") ||
-                declSpeciafier.toString().contains("linked_ptr")
-                ) {
+            final IASTDeclSpecifier declSpeciafier = declaration.getDeclSpecifier();
+            boolean hasRiskSmartPointer = Collections2.filter(
+                configProperty.getRiskSmartPointers(), new Predicate<String>() {
+                @Override
+                    public boolean apply(String s) {
+                        return declSpeciafier.toString().contains(s);
+                    }
+                }
+            ).size() > 0;
+
+            if (hasRiskSmartPointer) {
                 CheckResult checkResult = new CheckResult(
                     ErrorItem.SMART_POINTER,
                     ErrorType.STYLE,

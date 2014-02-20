@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class SmartPointerCheckerTest extends BaseTest {
 
-    private IChecker checker = new SmartPointerChecker();
+    private IChecker checker = new SmartPointerChecker(configProperty);
 
 //    // 测试当使用auto_ptr
 //    #include <iostream>

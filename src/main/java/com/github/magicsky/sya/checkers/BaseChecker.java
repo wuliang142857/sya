@@ -1,8 +1,11 @@
 package com.github.magicsky.sya.checkers;
 
+import com.github.magicsky.sya.model.ConfigProperty;
 import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.Mustache;
 import com.github.mustachejava.MustacheFactory;
+import lombok.Getter;
+import lombok.Setter;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
@@ -15,8 +18,14 @@ import java.util.Map;
  * @author garcia.wul@alibaba-inc.com
  */
 public abstract class BaseChecker implements IChecker {
-
     protected Logger logger = Logger.getLogger(getClass());
+
+    @Getter @Setter
+    protected ConfigProperty configProperty = null;
+
+    public BaseChecker(ConfigProperty configProperty) {
+        this.configProperty = configProperty;
+    }
 
     private MustacheFactory mustacheFactory = new DefaultMustacheFactory();
 

@@ -5,6 +5,7 @@ import com.github.magicsky.sya.checkers.BaseChecker;
 import com.github.magicsky.sya.enumerators.ErrorItem;
 import com.github.magicsky.sya.enumerators.ErrorType;
 import com.github.magicsky.sya.model.CheckResult;
+import com.github.magicsky.sya.model.ConfigProperty;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
@@ -71,6 +72,10 @@ public class BufferOverflowFunctionChecker extends BaseChecker {
         "_vsntprintf",
         "Strlen"
     );
+
+    public BufferOverflowFunctionChecker(ConfigProperty configProperty) {
+        super(configProperty);
+    }
 
     @Override
     public List<CheckResult> check(Object obj) {

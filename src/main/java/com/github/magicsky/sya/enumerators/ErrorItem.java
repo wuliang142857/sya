@@ -5,7 +5,8 @@ package com.github.magicsky.sya.enumerators;
  */
 public enum ErrorItem {
     SMART_POINTER(1, "不要使用类似std::auto_ptr这些有风险分智能指针"),
-    BUFFER_OVERFLOW_FUNCTION(1, "不要使用会造成缓冲区溢出(buffer overflow)的函数")
+    BUFFER_OVERFLOW_FUNCTION(2, "不要使用会造成缓冲区溢出(buffer overflow)的函数"),
+    DEFINE_GUARD(3, "建议使用#define对头文件进行保护"),
     ;
 
     private int value;

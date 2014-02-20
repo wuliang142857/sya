@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class BufferOverflowFunctionCheckerTest extends BaseTest {
 
-    private IChecker checker = new BufferOverflowFunctionChecker();
+    private IChecker checker = new BufferOverflowFunctionChecker(configProperty);
 
 //    int main () {
 //        char str1[] = "Sample string";
