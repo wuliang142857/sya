@@ -32,7 +32,6 @@ public class ICPPASTUsingDeclarationExample extends BaseTest {
 	//	}
     public void testExample() {
         IASTTranslationUnit translationUnit = parseCPP(getCommentAbove());
-        System.out.println(translationUnit.getDeclarations()[2].getRawSignature());
         assertTrue(translationUnit.getDeclarations()[2] instanceof ICPPASTUsingDeclaration);
     }
 }
