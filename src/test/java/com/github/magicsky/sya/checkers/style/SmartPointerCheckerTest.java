@@ -11,9 +11,9 @@ import java.util.List;
 /**
  * @author garcia.wul@alibaba-inc.com
  */
-public class AutoPtrCheckerTest extends BaseTest {
+public class SmartPointerCheckerTest extends BaseTest {
 
-    private IChecker checker = new AutoPtrChecker();
+    private IChecker checker = new SmartPointerChecker();
 
 //    // 测试当使用auto_ptr
 //    #include <iostream>
@@ -37,7 +37,7 @@ public class AutoPtrCheckerTest extends BaseTest {
         List<CheckResult> checkResults = checker.check(translationUnit);
         assertTrue(checkResults.size() > 0);
         CheckResult checkResult = checkResults.get(0);
-        assertEquals(ErrorItem.AUTO_PTR.getValue(), checkResult.getErrorItem().getValue());
+        assertEquals(ErrorItem.SMART_POINTER.getValue(), checkResult.getErrorItem().getValue());
     }
 
 //    // 测试当使用std::auto_ptr
@@ -61,6 +61,6 @@ public class AutoPtrCheckerTest extends BaseTest {
         List<CheckResult> checkResults = checker.check(translationUnit);
         assertTrue(checkResults.size() > 0);
         CheckResult checkResult = checkResults.get(0);
-        assertEquals(ErrorItem.AUTO_PTR.getValue(), checkResult.getErrorItem().getValue());
+        assertEquals(ErrorItem.SMART_POINTER.getValue(), checkResult.getErrorItem().getValue());
     }
 }
