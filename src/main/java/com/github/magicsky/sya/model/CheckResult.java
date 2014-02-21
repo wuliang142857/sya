@@ -16,6 +16,12 @@ public class CheckResult {
     private String fileName;
     private String comments;
 
+    public CheckResult(ErrorItem errorItem, ErrorType errorType, String fileName) {
+        setErrorItem(errorItem);
+        setErrorType(errorType);
+        setFileName(fileName);
+    }
+
     public CheckResult(ErrorItem errorItem, ErrorType errorType,
                        String fileName,
                        int startingLineNumber, int endingLineNumber) {

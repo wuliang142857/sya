@@ -60,8 +60,7 @@ public class DefineGuardChecker extends BaseChecker {
             CheckResult checkResult = new CheckResult(
                 ErrorItem.DEFINE_GUARD,
                 ErrorType.STYLE,
-                translationUnit.getFilePath(),
-                0, 0
+                translationUnit.getFilePath()
             );
             checkResults.add(checkResult);
 
