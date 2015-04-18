@@ -7,7 +7,7 @@ import org.eclipse.cdt.core.dom.ast.IASTAttribute;
 import java.util.List;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ASTAttributesVisitor extends BaseASTVisitor {
 

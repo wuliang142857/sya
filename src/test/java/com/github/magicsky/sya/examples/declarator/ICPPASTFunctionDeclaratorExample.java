@@ -7,7 +7,7 @@ import org.eclipse.cdt.core.dom.ast.cpp.ICPPASTFunctionDeclarator;
 import org.eclipse.cdt.core.dom.ast.cpp.ICPPASTNamespaceDefinition;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ICPPASTFunctionDeclaratorExample extends BaseTest {
 

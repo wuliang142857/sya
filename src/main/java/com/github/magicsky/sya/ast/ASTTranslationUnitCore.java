@@ -24,7 +24,7 @@ import java.util.Map;
 
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ASTTranslationUnitCore implements IASTTranslationUnitCore {
     private final static String TEST_CODE = "<testcode>";
@@ -101,7 +101,7 @@ public class ASTTranslationUnitCore implements IASTTranslationUnitCore {
             parserLanguage == ParserLanguage.C ?
                 GCCScannerExtensionConfiguration.getInstance(scannerInfo) :
                 GPPScannerExtensionConfiguration.getInstance(scannerInfo);
-        // garcia.wul 最后一个参数：IncludeFileContentProvider传null，不然会报workspace is closed错误
+        // Wu Liang 最后一个参数：IncludeFileContentProvider传null，不然会报workspace is closed错误
         return new CPreprocessor(
             fileContent, scannerInfo, parserLanguage, NULL_LOG, configuration, null
         );

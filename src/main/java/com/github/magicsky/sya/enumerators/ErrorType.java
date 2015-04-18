@@ -1,7 +1,7 @@
 package com.github.magicsky.sya.enumerators;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public enum ErrorType {
     STYLE(1, "编码分隔"),

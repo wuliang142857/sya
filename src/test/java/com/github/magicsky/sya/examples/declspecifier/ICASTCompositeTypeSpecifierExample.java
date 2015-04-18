@@ -6,7 +6,7 @@ import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 import org.eclipse.cdt.core.dom.ast.c.ICASTCompositeTypeSpecifier;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ICASTCompositeTypeSpecifierExample extends BaseTest {
     // struct A { static int i; };

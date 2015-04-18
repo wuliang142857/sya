@@ -7,7 +7,7 @@ import org.eclipse.cdt.core.dom.ast.IASTSimpleDeclaration;
 import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class IASTNameExample extends BaseTest {
 

@@ -3,7 +3,7 @@ package com.github.magicsky.sya.ast.visitors;
 import org.eclipse.cdt.core.dom.ast.ASTVisitor;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class BaseASTVisitor extends ASTVisitor {
 

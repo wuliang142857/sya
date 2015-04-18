@@ -7,7 +7,7 @@ import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 import org.eclipse.cdt.core.dom.ast.c.ICASTTypedefNameSpecifier;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ICASTTypedefNameSpecifierExample extends BaseTest {
 

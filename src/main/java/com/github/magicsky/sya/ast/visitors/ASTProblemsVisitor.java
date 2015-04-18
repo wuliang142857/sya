@@ -7,7 +7,7 @@ import org.eclipse.cdt.core.dom.ast.IASTProblem;
 import java.util.List;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ASTProblemsVisitor extends BaseASTVisitor {
 

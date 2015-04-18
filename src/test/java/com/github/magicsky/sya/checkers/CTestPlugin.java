@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class CTestPlugin extends Plugin {
     public static final String PLUGIN_ID = "org.eclipse.cdt.core.tests";

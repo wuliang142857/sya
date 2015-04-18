@@ -7,7 +7,7 @@ import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 import org.eclipse.cdt.core.dom.ast.cpp.ICPPFunctionTemplate;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ICPPFunctionTemplateExample extends BaseTest {
 

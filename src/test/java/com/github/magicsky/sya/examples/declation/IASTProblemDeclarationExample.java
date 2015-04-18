@@ -6,7 +6,7 @@ import org.eclipse.cdt.core.dom.ast.IASTProblemDeclaration;
 import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class IASTProblemDeclarationExample extends BaseTest {
 

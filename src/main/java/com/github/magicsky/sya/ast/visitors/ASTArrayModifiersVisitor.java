@@ -7,7 +7,7 @@ import org.eclipse.cdt.core.dom.ast.IASTArrayModifier;
 import java.util.List;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ASTArrayModifiersVisitor extends BaseASTVisitor {
 

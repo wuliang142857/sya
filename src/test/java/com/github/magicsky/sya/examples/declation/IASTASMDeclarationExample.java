@@ -6,7 +6,7 @@ import org.eclipse.cdt.core.dom.ast.IASTASMDeclaration;
 import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class IASTASMDeclarationExample extends BaseTest {
 

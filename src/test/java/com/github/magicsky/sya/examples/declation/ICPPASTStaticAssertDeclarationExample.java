@@ -5,7 +5,7 @@ import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 import org.eclipse.cdt.core.dom.ast.cpp.ICPPASTStaticAssertDeclaration;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ICPPASTStaticAssertDeclarationExample extends BaseTest {
 

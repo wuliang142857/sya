@@ -14,7 +14,7 @@ import org.junit.runners.Suite;
 })
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class AllTests {
 

@@ -7,7 +7,7 @@ import org.eclipse.cdt.core.dom.ast.IASTEnumerationSpecifier;
 import java.util.List;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ASTEnumeratorsVisitor extends BaseASTVisitor {
     @Getter

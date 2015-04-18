@@ -3,7 +3,7 @@ package com.github.magicsky.sya.ast;
 import org.eclipse.cdt.core.parser.ParserLanguage;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public interface IASTTranslationUnitCore {
 

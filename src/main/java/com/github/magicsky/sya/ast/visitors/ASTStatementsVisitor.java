@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * 语句的访问者
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ASTStatementsVisitor extends BaseASTVisitor {
 

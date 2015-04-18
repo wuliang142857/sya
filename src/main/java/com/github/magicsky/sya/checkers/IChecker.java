@@ -5,7 +5,7 @@ import com.github.magicsky.sya.model.CheckResult;
 import java.util.List;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public interface IChecker {
 

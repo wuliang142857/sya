@@ -8,7 +8,7 @@ import org.eclipse.cdt.core.dom.ast.*;
 import java.util.List;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ASTCompositeTypeDeclarationVisitor extends BaseASTVisitor {
 

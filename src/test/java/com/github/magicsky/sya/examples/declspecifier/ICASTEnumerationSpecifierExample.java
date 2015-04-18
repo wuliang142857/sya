@@ -6,7 +6,7 @@ import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 import org.eclipse.cdt.core.dom.ast.c.ICASTEnumerationSpecifier;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ICASTEnumerationSpecifierExample extends BaseTest {
 

@@ -6,7 +6,7 @@ import org.eclipse.cdt.core.dom.ast.IASTFunctionDefinition;
 import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class IASTFunctionDeclaratorExample extends BaseTest {
 

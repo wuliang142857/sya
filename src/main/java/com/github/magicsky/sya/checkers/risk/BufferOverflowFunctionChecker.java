@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class BufferOverflowFunctionChecker extends BaseChecker {
 

@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class SmartPointerChecker extends BaseChecker {
 
@@ -45,7 +45,7 @@ public class SmartPointerChecker extends BaseChecker {
                 continue;
 
             IASTSimpleDeclaration declaration = (IASTSimpleDeclaration) declarationStatement.getDeclaration();
-            // 2014-02-16 garcia.wul 如果用户自己定义了auto_ptr函数，则目前无法识别
+            // 2014-02-16 Wu Liang 如果用户自己定义了auto_ptr函数，则目前无法识别
             final IASTDeclSpecifier declSpeciafier = declaration.getDeclSpecifier();
             boolean hasRiskSmartPointer = Collections2.filter(
                 configProperty.getRiskSmartPointers(), new Predicate<String>() {

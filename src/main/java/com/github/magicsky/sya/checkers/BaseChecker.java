@@ -15,7 +15,7 @@ import java.io.Writer;
 import java.util.Map;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public abstract class BaseChecker implements IChecker {
     protected Logger logger = Logger.getLogger(getClass());

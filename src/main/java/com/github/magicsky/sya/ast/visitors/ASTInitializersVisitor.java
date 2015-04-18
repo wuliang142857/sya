@@ -7,7 +7,7 @@ import org.eclipse.cdt.core.dom.ast.IASTInitializer;
 import java.util.List;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ASTInitializersVisitor extends BaseASTVisitor {
 

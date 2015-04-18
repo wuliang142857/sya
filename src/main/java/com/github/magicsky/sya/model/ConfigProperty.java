@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 @Data
 public class ConfigProperty {

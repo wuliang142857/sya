@@ -1,7 +1,7 @@
 package com.github.magicsky.sya.enumerators;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public enum ErrorItem {
     SMART_POINTER(1, "不要使用类似std::auto_ptr这些有风险分智能指针"),

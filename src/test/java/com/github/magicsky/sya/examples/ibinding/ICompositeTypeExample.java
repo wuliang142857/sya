@@ -5,7 +5,7 @@ import org.eclipse.cdt.core.dom.ast.*;
 import org.eclipse.cdt.core.dom.ast.cpp.ICPPClassType;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ICompositeTypeExample extends BaseTest {
 

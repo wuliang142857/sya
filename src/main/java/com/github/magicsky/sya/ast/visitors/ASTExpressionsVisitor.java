@@ -7,7 +7,7 @@ import org.eclipse.cdt.core.dom.ast.IASTExpression;
 import java.util.List;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ASTExpressionsVisitor extends BaseASTVisitor {
 

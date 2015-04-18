@@ -9,7 +9,7 @@ import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
 import java.util.List;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class BufferOverflowFunctionCheckerTest extends BaseTest {
 

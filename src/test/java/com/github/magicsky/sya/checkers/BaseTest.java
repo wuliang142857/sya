@@ -11,7 +11,7 @@ import org.eclipse.cdt.core.parser.ParserLanguage;
 import java.io.IOException;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class BaseTest extends TestCase {
 

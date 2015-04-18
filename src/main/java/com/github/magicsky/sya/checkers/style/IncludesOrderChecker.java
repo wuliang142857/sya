@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class IncludesOrderChecker extends BaseChecker {
 

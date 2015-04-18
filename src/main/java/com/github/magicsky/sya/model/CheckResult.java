@@ -5,7 +5,7 @@ import com.github.magicsky.sya.enumerators.ErrorType;
 import lombok.Data;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 @Data
 public class CheckResult {

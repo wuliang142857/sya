@@ -9,7 +9,7 @@ import org.eclipse.cdt.core.dom.ast.IASTFunctionDefinition;
 import java.util.List;
 
 /**
- * @author garcia.wul@alibaba-inc.com
+ * @author 
  */
 public class ASTFunctionDefinitionVisitor extends BaseASTVisitor {
 
